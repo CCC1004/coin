@@ -1,0 +1,63 @@
+<import src='../template/tabbar.wxml'/>
+<view class='body'>
+  <view class='swipers'>
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='selects'>
+    <view class='selects-header'>
+      <text>精品推荐</text>
+      <text class='text-right'>全部精品</text>
+    </view>
+
+    <view class='selects-context'>
+
+      <view class='selects-context-imgs' wx:for='{{selectsImgs}}'>
+         <image src='{{item}}' />
+          <view class='selects-context-text'>
+              <text>Hello,I'm KimSoHyun</text>
+          </view>
+      </view>
+
+
+    </view>
+  </view>
+
+  <view class='lists'>
+    <!-- 头 -->
+     <view class='selects-header'>
+      <text>热门图片</text>
+      <text class='text-right'>全部图片</text>
+    </view>
+    <!-- 列表 -->
+    <view class='lists-context' wx:for='{{listsImgs}}'>
+      <view class='list-context-img'>
+        <!-- 图片 -->
+        <image src='{{item}}' />
+        <!-- 头像 -->
+        <view class='lists-context-name'>
+            <image src='{{headImg}}' />
+        </view>
+      </view>
+      <!-- 标题 -->
+      <view class='lists-context-title'>
+          <text>Hello,I'm KimSoHyun</text>
+      </view>
+      <!-- 内容 -->
+      <view class='lists-context-body'>
+          <text>金所泫（김소현），1999年6月4日出生于澳大利亚，韩国女演员。
+            代表作品:想你，拥抱太阳的月亮，My boy，可疑的保姆，学校2015，打架吧鬼神
+          </text>
+      </view>
+    </view>
+  </view>
+
+</view>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

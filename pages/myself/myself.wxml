@@ -1,0 +1,5 @@
+<import src='../template/tabbar.wxml'/>
+<text>pages/myself/myself.wxml</text>
+
+
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

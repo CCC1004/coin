@@ -1,0 +1,3 @@
+<import src="../template/tabbar.wxml"/>
+<text>pages/home/homePage.wxml</text>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
