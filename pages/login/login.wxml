@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="loginPage">
+    <view class="title">KimSoHyun</view>
+    <view class="login-from">
+      <!--账号-->
+      <view class="username">
+        <image class="nameImage" src="../../images/icon/user.png"></image>
+        <input class="inputText" placeholder-class="psection" placeholder="请输入账号" bindinput="usernameInput" /> </view>      
+      <!--密码-->
+      <view class="password">
+        <image class="keyImage" src="../../images/icon/password.png"></image>
+        <input class="inputText" placeholder-class="psection" password="true" 
+           placeholder="请输入密码" bindinput="passwordInput" /> 
+      </view>
+      <!--按钮-->
+      <view class="loginBtnView" bindtap="login">
+        <text class="loginBtn" >登录</text>
+      </view>
+      <view class='forgetPWView'>
+        <text bindtap='forgetPW'>忘记密码？</text>
+        <text>|</text>
+         <text bindtap='regsiter'>我要注册</text>
+      </view>
+    </view>
+  </view>  
+</view>

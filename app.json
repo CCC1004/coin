@@ -1,15 +1,16 @@
 {
   "pages": [
-    "pages/home/homePage",
+    "pages/login2/login2",
+    "pages/login/login",
     "pages/index/index",
+    "pages/home/homePage",
     "pages/myself/myself",
     "pages/logs/logs"
-
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "KimSoHyun",
     "navigationBarTextStyle": "black"
   }
 }
