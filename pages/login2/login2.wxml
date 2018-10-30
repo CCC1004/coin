@@ -4,11 +4,11 @@
     <view class="login-from">
       <!--账号-->
       <view class="username">
-        <image class="nameImage" src="../../images/icon/user.png"></image>
+        <image class="nameImage" src="../../images/icon/name.png"></image>
         <input class="inputText" placeholder-class="psection" placeholder="请输入账号" bindinput="usernameInput" /> </view>      
       <!--密码-->
       <view class="password">
-        <image class="keyImage" src="../../images/icon/password.png"></image>
+        <image class="keyImage" src="../../images/icon/key.png"></image>
         <input class="inputText" placeholder-class="psection" password="true" 
            placeholder="请输入密码" bindinput="passwordInput" /> 
       </view>
