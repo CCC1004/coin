@@ -9,7 +9,15 @@ page {
   flex-direction: column;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f2f2f2;
+  background-color: white;
+}
+
+.loginPage{
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  /* background: linear-gradient(130deg, #ffd7df, rgb(137, 102, 219)); */
+  background-color: white;
 }
 
 .title{
@@ -20,10 +28,33 @@ page {
   text-align:center;
 }
 
+.backImg{
+  width: 100%;
+  height: 250rpx;
+  /* overflow: hidden;  */
+  position:relative;
+}
+
+.backImg image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 圆 */
+.dist_s{
+width:1200rpx;
+height:1200rpx;
+border-radius:600rpx;
+background-color:#d72652;
+margin-left:-249rpx;
+margin-top:-647px;
+border: 1px solid #d72652;
+}
+
 /*表单内容*/
 
 .login-from {
-  margin-top: 150rpx;
+  margin-top: 50rpx;
   flex: auto;
 }
 
@@ -86,13 +117,6 @@ page {
   color:#fff;
 }
 
-.loginPage{
-  width: 100%;
-  height: 100%;
-  margin: 10px auto;
-  /* background: linear-gradient(130deg, #ffd7df, rgb(137, 102, 219)); */
-  background-color: white;
-}
 
 /* 忘记密码 */
 .forgetPWView{

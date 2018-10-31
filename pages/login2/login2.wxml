@@ -1,6 +1,10 @@
 <view class="container">
   <view class="loginPage">
-    <view class="title">KimSoHyun</view>
+    <view class='backImg'>
+      <image src='../../images/66.jpeg'></image>
+      <view class='dist_s'></view>
+    </view>
+    <!-- <view class="title">KimSoHyun</view> -->
     <view class="login-from">
       <!--账号-->
       <view class="username">

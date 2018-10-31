@@ -8,9 +8,10 @@
     "pages/myself/myself",
     "pages/logs/logs"
   ],
+
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "light", 
+    "navigationBarBackgroundColor": "#d72652",
     "navigationBarTitleText": "KimSoHyun",
     "navigationBarTextStyle": "black"
   }
