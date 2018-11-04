@@ -1,4 +1,4 @@
-page {
+/* pages/forgetPW/forgetPW.wxss */page {
   height: 100%;
 
 }
@@ -28,8 +28,8 @@ page {
 
 
 /*输入框*/
-.mobile, .idCode, .password{
-  width:80%;
+.mobile, .idCode, .password, .againPW{
+  width:90%;
   height:70rpx;
   line-height:70rpx;
   border-bottom:1rpx solid #d4d4d4;
@@ -40,7 +40,7 @@ page {
   margin:60rpx auto 0rpx auto; /* 上、右、下、左 */
 }
 
-.mobile input,.idCode input, .password input{
+.mobile input,.idCode input, .password input, .againPW input{
   border:none;
   background:none;
   font-size:35rpx;
@@ -49,11 +49,18 @@ page {
   width: 100%;
 }
 
-.mobileImage, .idCodeImage, .keyImage{  
+.mobileImage, .keyImage, .againImage{  
   width: 40rpx;
   height: 40rpx;
   /* background-color: #ffd7df; */
   margin-left: 20rpx;
+}
+
+.idCodeImage{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  flex-shrink: 0;/* 当空间不足时，元素的缩小比例，默认为1，设置为0，不缩小 */
 }
 
 /* 提示信息 */
@@ -69,7 +76,7 @@ page {
 }
 
 /*按钮*/
-.regsiterBtnView {
+.confirmBtnView {
   width:80%;
   height:85rpx;
   margin:100rpx auto 20rpx auto;
@@ -79,21 +86,8 @@ page {
   border-radius:100rpx;
 }
 
-.regsiterBtn {
+.confirmrBtn {
   width: 84%;
   font-size:33rpx;
   color:#fff;
-}
-
-
-/* 提示 */
-.tishi{
-  text-align: center;
-  font-size: 24rpx;
-  margin-top: 30px;
-}
-
-/* 协议 */
-.protocol{
-  color: #ff5d8f;
 }

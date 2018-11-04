@@ -1,9 +1,8 @@
-<import src='../template/tabbar.wxml'/>
 <view class='body'>
   <view class='swipers'>
     <swiper indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{imgUrls}}">
+      <block wx:for="{{imgUrls}}" wx:key="item">
         <swiper-item>
           <image src="{{item}}" class="slide-image"/>
         </swiper-item>
@@ -19,7 +18,7 @@
 
     <view class='selects-context'>
 
-      <view class='selects-context-imgs' wx:for='{{selectsImgs}}'>
+      <view class='selects-context-imgs' wx:for='{{selectsImgs}}' wx:key="item">
          <image src='{{item}}' />
           <view class='selects-context-text'>
               <text>Hello,I'm KimSoHyun</text>
@@ -37,7 +36,7 @@
       <text class='text-right'>全部图片</text>
     </view>
     <!-- 列表 -->
-    <view class='lists-context' wx:for='{{listsImgs}}'>
+    <view class='lists-context' wx:for='{{listsImgs}}' wx:key="item">
       <view class='list-context-img'>
         <!-- 图片 -->
         <image src='{{item}}' />
@@ -60,4 +59,4 @@
   </view>
 
 </view>
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+

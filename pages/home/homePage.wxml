@@ -1,3 +1,51 @@
-<import src="../template/tabbar.wxml"/>
-<text>pages/home/homePage.wxml</text>
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+<view class='body'>
+
+  <!--  -->
+  <view class='head'>
+    <view class='headImg'>
+     <image src='{{headImg}}'/>
+    </view>
+    <view class='headText'>
+      <text>金所炫</text>
+      <view class='headContext'>
+        <text decode="{{true}}">
+          &ensp;&ensp;&ensp;金所泫（김소현）,1999年6月4日出生于澳大利亚，韩国女演员。
+        </text>
+        <text decode="{{true}}">
+          &ensp;&ensp;&ensp;2007年通过电视剧《传说中的故乡》出道。2012年凭借《拥抱太阳的月亮》 、《想你》 与《Love again》获得MBC演技大赏。2013年凭借《听见你的声音》、《可疑的保姆》...<text class='xq' bindtap='xq'> [详情] </text>
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <view class='perLife'>
+    <view class='selects-header'>
+      <text>个人生活</text>
+    </view>
+
+    <view class='headContext'>
+      <text decode="{{true}}">
+        &ensp;&ensp;&ensp;2015年2月12日，金所泫以优异的成绩从所属初中毕业，参加了毕业典礼。
+        &ensp;&ensp;&ensp;2017年8月，金所泫通过两年多自学，顺利通过高中毕业考试。
+        &ensp;&ensp;&ensp;2017年11月10日，金所泫通过韩国汉阳大学保送生考试，正式成为汉阳大学戏剧电影学系2018届学生。
+      </text>
+    </view>
+  </view>
+  
+  <view class='selects'>
+    <view class='selects-header'>
+      <text>精品推荐</text>
+      <text class='text-right'>全部精品</text>
+    </view>
+
+    <view class='selects-context'>
+      <view class='selects-context-imgs' wx:for='{{selectsImgs}}' wx:key="item">
+         <image src='{{item}}' />
+          <view class='selects-context-text'>
+              <text>Hello,I'm KimSoHyun</text>
+          </view>
+      </view>
+    </view>
+  </view>
+
+</view>  

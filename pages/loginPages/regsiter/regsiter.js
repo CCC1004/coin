@@ -1,46 +1,21 @@
+// pages/regsiter/regsiter.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    username: null,
-    password: null,
-  },
-  
-  /** 获取键入值 */
-  usernameInput(event) {
-    this.setData({ username: event.detail.value })
-    console.info(event.detail.value)
-  },
 
-  passwordInput(event) {
-    this.setData({ password: event.detail.value })
-    console.info(event.detail.value)
   },
 
   /**
-   * 登录
+   * 用户协议
    */
-  login() {
-    // wx.navigateTo({
-    //   url: '../index/index',
-    // })
-
-    wx.redirectTo({
-      url: '../index/index',
-    })
-  },
-
-  /**
-   * 注册
-   */
-  regsiter(){
+  userProtocol(){
     wx.navigateTo({
-      url: '../regsiter/regsiter',
+      url: '../protocol/protocol',
     })
   },
-
 
   /**
    * 生命周期函数--监听页面加载

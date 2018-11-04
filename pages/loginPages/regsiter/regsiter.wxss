@@ -12,96 +12,71 @@ page {
   background-color: white;
 }
 
-.loginPage{
+.regsiterPage{
   width: 100%;
   height: 100%;
-  margin: 0px auto;
+  margin: 10px auto;
   /* background: linear-gradient(130deg, #ffd7df, rgb(137, 102, 219)); */
   background-color: white;
 }
 
-.title{
-  margin:100rpx auto 0rpx auto;
-  font-size:70rpx;
-  color:#ffd7df;
-  word-spacing:10rpx;
-  text-align:center;
-}
-
-.backImg{
-  width: 100%;
-  height: 250rpx;
-  /* overflow: hidden;  */
-  position:relative;
-}
-
-.backImg image{
-  width: 100%;
-  height: 100%;
-}
-
-/* 圆 */
-.dist_s{
-width:1200rpx;
-height:1200rpx;
-border-radius:600rpx;
-background-color:#d72652;
-margin-left:-249rpx;
-margin-top:-647px;
-border: 1px solid #d72652;
-}
-
 /*表单内容*/
-
-.login-from {
-  margin-top: 50rpx;
+.regsiter-from {
+  margin-top: 150rpx;
   flex: auto;
 }
 
 
 /*输入框*/
-
-.username, .password{
+.mobile, .idCode, .password{
   width:80%;
   height:70rpx;
   line-height:70rpx;
   border-bottom:1rpx solid #d4d4d4;
-  display: flex;
+  display: flex;/* flex布局 */
   flex-direction: row;
   text-align: left;
   padding:0rpx 0rpx 0rpx 10rpx;
+  margin:60rpx auto 0rpx auto; /* 上、右、下、左 */
 }
 
-.username{  
-  margin:100rpx auto 0rpx auto; /* 上、右、下、左 */
-}
-.password{
-  margin:50rpx auto 0rpx auto;
-}
-
-.username input, .password input{
+.mobile input,.idCode input, .password input{
   border:none;
   background:none;
   font-size:35rpx;
   color:black;
   margin-left: 20rpx;
+  width: 100%;
 }
 
-.nameImage, .keyImage {  
+.mobileImage, .keyImage{  
   width: 40rpx;
   height: 40rpx;
   /* background-color: #ffd7df; */
   margin-left: 20rpx;
 }
 
+.idCodeImage{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  flex-shrink: 0;/* 当空间不足时，元素的缩小比例，默认为1，设置为0，不缩小 */
+}
+
 /* 提示信息 */
 .psection{
-    color: #b4b4b4;
-    font-size: 28rpx;
+  color: #b4b4b4;
+  font-size: 28rpx;
+}
+
+/* 发送验证码 */
+.sendIdCode input{
+  color: #ff5d8f;
+  font-size: 28rpx;
 }
 
 /*按钮*/
-.loginBtnView {
+.regsiterBtnView {
   width:80%;
   height:85rpx;
   margin:100rpx auto 20rpx auto;
@@ -111,21 +86,21 @@ border: 1px solid #d72652;
   border-radius:100rpx;
 }
 
-.loginBtn {
+.regsiterBtn {
   width: 84%;
   font-size:33rpx;
   color:#fff;
 }
 
 
-/* 忘记密码 */
-.forgetPWView{
+/* 提示 */
+.tishi{
   text-align: center;
-  font-size: 30rpx;
-  margin-top: 40px;
+  font-size: 24rpx;
+  margin-top: 30px;
 }
 
-.forgetPWView text{
-  color: #9f9f9f;
-  margin: 8px;
+/* 协议 */
+.protocol{
+  color: #ff5d8f;
 }

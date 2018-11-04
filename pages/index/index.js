@@ -24,7 +24,7 @@ Page({
     //列表图片
     listsImgs: [
       '../../images/3.jpg',
-      '../../images/7.jpg',
+      '../../images/21.jpg',
       '../../images/8.jpg',
       '../../images/15.jpg'
     ],
