@@ -6,20 +6,54 @@ Page({
   data: {
 
     headImg: '../../images/0.jpg',
+    
+    isPlayingMusic: false,//设置音乐播放状态，默认是false（暂停）
+    musicStopImg: '../../images/music/music-stop.jpg',
+    musicStartImg: '../../images/music/music-start.jpg',
+    musicName: '第一次开始爱情',
+    musicAuthor: '金所炫',
 
-    selectsImgs: [
-      '../../images/9.jpg',
-      '../../images/10.jpg',
-      '../../images/13.jpg',
-      '../../images/14.jpg'
-    ]
+  },
+
+  /**
+   * 音乐播放/暂停
+   */
+  onMusicTap: function(event){
+    var flag = this.data.isPlayingMusic;
+    const backAudio = wx.getBackgroundAudioManager();
+    if(flag){
+      //暂停
+      backAudio.pause();
+      // 设置setData值，前端界面才能读取到isPlayingMusic是值，以下同理
+      console.log("pause");
+      this.setData({
+        isPlayingMusic: false
+      })
+    }else{
+      backAudio.src = "../../resource/music/1.mp3";
+      backAudio.title = "kim";
+      //播放
+      backAudio.play(); 
+      console.log("play");
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
+    backAudio.onPlay(() => {
+      console.log("音乐播放开始");
+    })
+    backAudio.onPause(() => {
+      console.log("音乐播放暂停");
+    })
+    backAudio.onEnded(() => {
+      console.log("音乐播放结束");
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
   },
 
   /**

@@ -2,7 +2,7 @@
 
   <!--  -->
   <view class='head'>
-    <view class='headImg'>
+    <view class='head-image'>
      <image src='{{headImg}}'/>
     </view>
     <view class='headText'>
@@ -32,18 +32,24 @@
     </view>
   </view>
   
-  <view class='selects'>
+  <view class='musics'>
     <view class='selects-header'>
-      <text>精品推荐</text>
-      <text class='text-right'>全部精品</text>
+      <text>音乐作品</text>
+      <text class='text-right'>全部</text>
     </view>
 
-    <view class='selects-context'>
-      <view class='selects-context-imgs' wx:for='{{selectsImgs}}' wx:key="item">
-         <image src='{{item}}' />
-          <view class='selects-context-text'>
-              <text>Hello,I'm KimSoHyun</text>
-          </view>
+    <view class='musics-list'>
+      <view class='music'>
+        <view class='music-img'>
+         <image catchtap='onMusicTap' src="{{isPlayingMusic?'../../images/music/music-stop.jpg':'../../images/music/music-start.jpg'}}" ></image>
+        </view>
+        <view class='music-context'>
+          <text>{{musicName}}</text>
+          <text class='music-author'>{{musicAuthor}}</text>
+        </view>
+      </view>
+       <view class='music'>
+         
       </view>
     </view>
   </view>
