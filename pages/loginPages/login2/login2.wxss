@@ -90,19 +90,25 @@ page {
     font-size: 28rpx;
 }
 
-/*按钮*/
-.loginBtnView {
+/* 登录按钮 */
+.login-Btn {
   width:80%;
   height:85rpx;
-  margin:100rpx auto 20rpx auto;
+  border-radius:100rpx;
+  margin:80rpx auto 20rpx auto;
   line-height:80rpx;
   text-align:center;
   background:#ff5d8f;  
-  border-radius:100rpx;
+  font-size:33rpx;
+  color:#fff;
 }
 
-.loginBtn {
-  width: 84%;
+/* 微信登录 */
+.weLogin-btn{
+  width:80%;
+  height:85rpx;
+  border-radius:100rpx;
+  margin:30rpx auto 20rpx auto;
   font-size:33rpx;
   color:#fff;
 }
@@ -119,3 +125,57 @@ page {
   color: #9f9f9f;
   margin: 8px;
 }
+
+/* 第三方登录 */
+.other-text{
+  text-align: center;
+  width: 100%;
+  font-size: 28rpx;
+  margin-top: 40rpx;
+  margin-left: 150rpx;
+  color: #b4b4b4;
+  display: flex;
+  flex-direction: row;
+}
+.text-line{
+  height: 1rpx;
+  width: 170rpx;
+  margin-top: 20rpx;
+  border-top: 1rpx solid #9f9f9f;
+}
+
+.otherLogin{
+  height: 100rpx;
+  width: 70%;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+/* 第三方-图标 */
+.otherLogin-item{
+  height: 80rpx;
+  width: 80rpx;
+  flex-shrink:0;
+  margin-left: 200rpx;
+}
+
+.otherLogin-item2{
+  height: 80rpx;
+  width: 80rpx;
+  flex-shrink:0;
+}
+
+.otherLogin-item image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.otherLogin-item2 image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+

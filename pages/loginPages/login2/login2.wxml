@@ -16,15 +16,42 @@
         <input class="inputText" placeholder-class="psection" password="true" 
            placeholder="请输入密码" bindinput="passwordInput" /> 
       </view>
-      <!--按钮-->
-      <view class="loginBtnView" bindtap="login">
-        <text class="loginBtn" >登 录</text>
+      
+      <!--按钮 登录-->
+      <view>
+        <button class='login-Btn' bindtap="login">登 录</button>
       </view>
+      <!--微信登录-->
+      <view>
+        <button wx:if="{{canIUse}}" class='weLogin-btn' type='warn' 
+          open-type='getUserInfo' bindgetuserinfo='weLogin'>微信登录</button>
+        <view wx:else>请升级微信版本</view>
+      </view>
+
       <view class='forgetPWView'>
         <text bindtap='forgetPW'>忘记密码？</text>
         <text>|</text>
          <text bindtap='regsiter'>我要注册</text>
       </view>
+
+      <!-- 第三方登录 -->
+      <view class='other-text'>
+        <view class='text-line'></view>
+        <text>第三方登录</text>
+        <view class='text-line'></view>
+      </view>
+      <view class='otherLogin'>
+        <view class='otherLogin-item'>
+          <image src='../../../images/logo/koukou.jpg'/>
+        </view>
+         <view class='otherLogin-item2'>
+          <image src='../../../images/logo/weixin.jpg'/>
+        </view>
+         <view class='otherLogin-item2'>
+            <image src='../../../images/logo/shouji.jpg'/>
+        </view>
+      </view>
+
     </view>
   </view>  
 </view>

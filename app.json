@@ -1,12 +1,11 @@
 {
   "pages": [
-    "pages/home/homePage",
-    "pages/index/index",
     "pages/loginPages/login2/login2",
+    "pages/index/index",
+    "pages/home/homePage",
     "pages/myself/myself",
     "pages/loginPages/regsiter/regsiter",
     "pages/loginPages/forgetPW/forgetPW",
-    "pages/loginPages/login/login",
     "pages/logs/logs"
   ],
   "window": {
@@ -33,12 +32,13 @@
         "selectedIconPath": "/images/tabBarImg/f2on.png"
       },
       {
-        "pagePath": "pages/loginPages/login2/login2",
+        "pagePath": "pages/myself/myself",
         "text": "我的",
         "iconPath": "/images/tabBarImg/f3.png",
         "selectedIconPath": "/images/tabBarImg/f3on.png"
 
       }
     ]
-  }
+  },
+  "debug": true
 }

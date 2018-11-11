@@ -26,7 +26,7 @@ Page({
       '../../images/3.jpg',
       '../../images/21.jpg',
       '../../images/8.jpg',
-      '../../images/15.jpg'
+      '../../images/8.jpg'
     ],
     // 头像图片
     headImg: '../../images/timg.jpg'
