@@ -43,6 +43,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    kim_url: "http://localhost:8084/kim/"
+    kim_url: "http://localhost:8084/"
   }
 })

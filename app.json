@@ -6,7 +6,8 @@
     "pages/myself/myself",
     "pages/loginPages/regsiter/regsiter",
     "pages/loginPages/forgetPW/forgetPW",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/loginPages/protocol/protocol"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,7 +37,6 @@
         "text": "我的",
         "iconPath": "/images/tabBarImg/f3.png",
         "selectedIconPath": "/images/tabBarImg/f3on.png"
-
       }
     ]
   },
