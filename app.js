@@ -6,16 +6,11 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
     // 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
+
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
@@ -27,14 +22,14 @@ App({
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
+
             }
           })
         }
       }
     })
   },
-  serverUrl: '',
-  userInfo: null,
+  
   setGlobalUserInfo: function(user){
     wx.setStorageSync('userInfo', user)
   },
@@ -42,7 +37,15 @@ App({
     return wx.getStorageSync("userInfo");
   },
   globalData: {
-    userInfo: null,
+    userInfo: null,//微信登录用户信息
     kim_url: "http://localhost:8084/"
-  }
+  },
+  //系统用户信息
+  appData: {
+    user: {
+      id: null,
+      username: null,
+      realName: null
+    },
+  },
 })
