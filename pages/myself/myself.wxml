@@ -1,4 +1,64 @@
-<text>pages/myself/myself.wxml</text>
+<!-- wx微信用户信息 -->
+<view class="head" wx:if="{{wxUserInfo}}" bindtap="toPage" data-url="/pages/myself/mine/mine">
+  <view class="head-top">
+    <text decode="{{true}}">{{wxUserInfo.nickName ? wxUserInfo.nickName : '&nbsp;&nbsp;'}}</text>
+    <image src="{{wxUserInfo.avatarUrl ? wxUserInfo.avatarUrl : '/images/app/mine.png'}}" 
+      mode="widthFix"></image>
+  </view>
+  <view class="head-group">
+      <text decode="{{true}}">{{wxUserInfo.city ? wxUserInfo.city : '&nbsp;&nbsp;'}}</text>
+      <image src="/images/arrow-left.png" mode="widthFix"></image>
+  </view>
+  <view class="head-footer">
+    <text>添加工作状态...</text>
+  </view>
+</view>
 
+<!-- kim系统用户信息 -->
+<view class="head" wx:if="{{kimUserInfo}}" bindtap="toPage" data-url="/pages/myself/mine/mine">
+  <view class="head-top">
+    <text decode="{{true}}">{{kimUserInfo.realname ? kimUserInfo.realname : '&nbsp;&nbsp;'}}</text>
+    <image src="{{kimUserInfo.imgUrl ? kimUserInfo.imgUrl : '/images/app/mine.png'}}"    
+      mode="widthFix"></image>
+  </view>
+  <view class="head-group">
+      <text decode="{{true}}">{{kimUserInfo.address ? kimUserInfo.address : '&nbsp;&nbsp;'}}</text>
+      <image src="/images/arrow-left.png" mode="widthFix"></image>
+  </view>
+  <view class="head-footer">
+    <text>添加工作状态...</text>
+  </view>
+</view>
+ 
+<!-- 功能列表 -->
+<view class="list">
+  <view class="list-item" bindtap="toUrl">
+    <image src="/images/app/zzlc.png" mode="widthFix"></image>
+    <text>组织切换</text>
+    <view class="list-item-right">
+      <text>{{orgname==''?userInfo.company:orgname}}</text>
+      <image src="/images/arrow-left.png" mode="widthFix"></image>
+    </view>
+  </view>
 
+   <view class="list-item" bindtap="toPage" data-url="/pages/mine/honour/honour">
+    <image src="/images/app/sssj.png" mode="widthFix"></image>
+    <text>荣耀值</text>
+    <view class="list-item-right">
+      <text>27分，今日下降10分</text>
+      <image src="/images/arrow-left.png" mode="widthFix"></image>
+    </view>
+  </view>
 
+   <view class="list-item" bindtap='toUrl' 
+    data-url="https://huabodashuju.com/orguserwx/orgoruser"      
+    data-sessionid='{{userInfo.sessionId}}'>
+    <image src="/images/app/cwgl.png" mode="widthFix"></image>
+    <text>组织架构</text>                 
+    <view class="list-item-right">
+      <text></text>
+      <image src="/images/arrow-left.png" mode="widthFix"></image>
+    </view>
+  </view>
+
+</view>

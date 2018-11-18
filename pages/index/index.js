@@ -12,25 +12,12 @@ Page({
     duration: '1000',
     //图片资源访问IP
     urlInfo: null,
-    //轮播图
-    imgUrls: null,
-    //集合图片
-    selectsImgs: [
-      '../../images/9.jpg',
-      '../../images/10.jpg',
-      '../../images/13.jpg',
-      '../../images/14.jpg'
-    ],
-    //列表图片
-    listsImgs: [
-      '../../images/4.jpg',
-      '../../images/21.jpg',
-      '../../images/5.jpg',
-      '../../images/5.jpg'
-    ],
-    // 头像图片
-    headImg: '../../images/timg.jpg'
-
+    //轮播图数据
+    lbData: null,
+    //精品推荐数据
+    jptjData: null,
+    //热门图片列表数据集合
+    rmtpData: null,
   },
 
   /**
@@ -38,19 +25,6 @@ Page({
     */
   onLoad: function (options) {
     
-    console.info(options)
-    //获取用户信息
-    var userInfo = app.getGlobalUserInfo();
-    console.info("微信用户名称---" + userInfo)
-
-    if (userInfo!=null && userInfo!='') {
-        //用户已经授权过
-    }else{
-      wx.navigateTo({
-        url: '../loginPages/login2/login2',
-      })
-    }
-
     //设置url
     this.setData({
       urlInfo: app.globalData.kim_url,
@@ -59,6 +33,12 @@ Page({
     //获取轮播列表
     this.getLbList(this)
 
+    //获取精品推荐列表
+    this.getJptjList(this)
+
+    //获取热门图片列表
+    this.getRmtpList(this)
+    
   },
 
   //获取轮播列表
@@ -67,10 +47,35 @@ Page({
       url: app.globalData.kim_url + 'index/getLbList',
       success: function (res) {
         that.setData({
-          imgUrls: res.data.data,  
+          lbData: res.data.data,  
         })
       }
     })
   },
+
+  //获取精品推荐列表
+  getJptjList: function(that){
+    wx.request({
+      url: app.globalData.kim_url + 'index/getJptjList',
+      success: function (res) {
+        that.setData({
+          jptjData: res.data.data,
+        })
+      }
+    })
+  },
+
+  //获取热门图片列表
+  getRmtpList: function (that) {
+    wx.request({
+      url: app.globalData.kim_url + 'index/getRmtpList',
+      success: function (res) {
+        that.setData({
+          rmtpData: res.data.data,
+        })
+      }
+    })
+  },
+
 
 })

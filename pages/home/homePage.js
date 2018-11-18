@@ -1,3 +1,5 @@
+const app = getApp()
+
 Page({
 
   /**
@@ -5,7 +7,7 @@ Page({
    */
   data: {
 
-    headImg: '../../images/0.jpg',
+    headImg: '/images/0.jpg',
     
     isPlayingMusic: false,//设置音乐播放状态，默认是false（暂停）
     musicStopImg: '../../images/music/music-stop.jpg',
@@ -54,6 +56,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    //获取微信用户信息
+    var wxUserInfo = app.getWxUserInfo();
+    console.info("微信用户名称为：" + wxUserInfo)
+
+    //获取系统用户信息
+    var kimUserInfo = app.getKimUserInfo();
+    console.info("系统用户名称为：" + kimUserInfo)
+
+    //用户已经授权过
+    if ((wxUserInfo != null && wxUserInfo != '') || (kimUserInfo != null && kimUserInfo != '')) {
+
+    } else {
+      wx.navigateTo({
+        url: '../loginPages/login2/login2',
+      })
+    }
+
   },
 
   /**

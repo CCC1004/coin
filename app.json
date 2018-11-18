@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/myself/myself",
     "pages/index/index",
     "pages/home/homePage",
-    "pages/myself/myself",
     "pages/loginPages/login2/login2",
     "pages/loginPages/regsiter/regsiter",
     "pages/loginPages/forgetPW/forgetPW",
     "pages/logs/logs",
-    "pages/loginPages/protocol/protocol"
+    "pages/loginPages/protocol/protocol",
+    "pages/myself/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",

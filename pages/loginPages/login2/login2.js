@@ -6,10 +6,19 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //背景图片img
+    backgroudImg: '../../../images/66.jpeg',
     username: null,
     password: null,
     //判断小程序的API，回调，参数，组件等是否在当前版本可用。
     canIUse: wx.canIUse('button.open-type.getUserInfo')
+  },
+
+  /**
+    * 生命周期函数--监听页面加载
+    */
+  onLoad: function (options) {
+
   },
 
   /** 获取键入值 */
@@ -41,13 +50,11 @@ Page({
         success: function(res){
           console.info(res);
           if (res.data.status==200){
-            //存入user信息
+            //user信息
             var user = res.data.data;
-            app.appData.user={
-              id: user.id,
-              username: user.username,
-              realname: user.realname
-            }
+            //将用户存储至storage
+            app.setKimUserInfo(user)
+
             //跳转至首页
             wx.switchTab({
               url: '../../index/index',
@@ -75,7 +82,6 @@ Page({
       //用户按了允许授权按钮
       wx.login({
         success: function (res) {
-          console.log(res)
           //获取登录的临时凭证
           var code = res.code;
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
@@ -86,7 +92,8 @@ Page({
             },
             success: function (result) {
               //保存用户信息到本地缓存，可以用作小程序端的拦截器
-              app.setGlobalUserInfo(e.detail.userInfo);
+              app.setWxUserInfo(e.detail.userInfo);
+              
               //跳转至首页（注意switchTab只能跳转到带有tab的页面，不能跳转到不带tab的页面）
               wx.switchTab({
                 url: '../../index/index',

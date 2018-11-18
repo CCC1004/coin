@@ -1,0 +1,35 @@
+<view class="head">
+    <image src="{{wxUserInfo.avatarUrl ? wxUserInfo.avatarUrl : '/images/mine.png'}}" mode="widthFix"></image>
+</view>
+
+<view class="user-info">
+   <view class="info-item">
+      <text>姓名</text>
+      <text>{{wxUserInfo.nickName}}</text>
+      <image src="/images/name.png" mode="widthFix"></image>
+  </view>
+   <view class="info-item">
+      <text>性别</text>
+      <text>{{wxUserInfo.gender}}</text>
+      <image src="/images/sex.png" mode="widthFix"></image>
+  </view>
+   <view class="info-item">
+      <text>公司</text>
+      <text>{{wxUserInfo.company}}</text>
+      <image src="/images/company.png" mode="widthFix"></image>
+  </view>
+   <view class="info-item">
+      <text>部门</text>
+      <text>{{wxUserInfo.dep}}</text>
+      <image src="/images/department.png" mode="widthFix"></image>
+  </view>
+   <view class="info-item">
+      <text>职位</text>
+      <text>{{wxUserInfo.position}}</text>
+      <image src="/images/job.png" mode="widthFix"></image>
+  </view>
+</view>
+
+<view class="footer">
+   <button class="logout" bindtap="logout">退出登录</button>
+</view>

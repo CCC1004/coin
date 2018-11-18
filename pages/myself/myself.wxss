@@ -1,1 +1,81 @@
-/* pages/myself/myself.wxss */
+.head{
+padding:20rpx;
+border:1rpx solid #c1c1c2;
+border-radius:10rpx;
+margin:30rpx;
+box-shadow:0rpx 5px 15px #888888;
+
+}
+.head-top{
+margin-bottom:70rpx;
+}
+.head-top > text{
+  font-size:36rpx;
+  font-weight:500;
+}
+.head-top > image{
+  width:120rpx;
+  height:120rpx;
+  float:right;
+}
+.head-group{
+margin-bottom:20rpx;
+position:relative;
+}
+.head-group > text{
+font-size:30rpx;
+
+}
+.head-group > image{
+  width:16rpx;
+  height:35rpx;
+  margin-left:10rpx;
+  position:absolute;
+  top:14rpx;
+}
+.head-footer{
+border-top:1rpx solid #c1c1c2;
+}
+.head-footer > text{
+font-size:28rpx;
+color:#888888;
+
+}
+
+.list{
+  padding:40rpx;
+}
+.list-item{
+  border-bottom:1rpx solid #c1c1c2;
+  position:relative;
+  margin-top: 20rpx;
+
+}
+.list-item > image{
+width:80rpx;
+
+}
+.list-item > text{
+  font-size:36rpx;
+  position:absolute;
+  top:18rpx;
+  left:105rpx;
+
+}
+.list-item-right{
+float:right;
+line-height:80rpx;
+
+}
+.list-item-right > text{
+  font-size:30rpx;
+  color:#c1c1c2;
+  margin-right:20rpx;
+  position:absolute;
+  right:20rpx;
+  top:-4rpx;
+}
+.list-item-right > image{
+width:20rpx;
+
+}

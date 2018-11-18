@@ -2,7 +2,7 @@
   <view class='swipers'>
     <swiper indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{imgUrls}}" wx:key="item">
+      <block wx:for="{{lbData}}" wx:key="item">
         <swiper-item>
           <image src="{{urlInfo}}{{item.kimResources.filePath}}" class="slide-image"/>
         </swiper-item>
@@ -18,10 +18,10 @@
 
     <view class='selects-context'>
 
-      <view class='selects-context-imgs' wx:for='{{selectsImgs}}' wx:key="item">
-         <image src='{{item}}' />
+      <view class='selects-context-imgs' wx:for='{{jptjData}}' wx:key="item">
+         <image src='{{urlInfo}}{{item.kimResources.filePath}}' />
           <view class='selects-context-text'>
-              <text>Hello,I'm KimSoHyun</text>
+              <text>{{item.jpDesc}}</text>
           </view>
       </view>
 
@@ -36,23 +36,22 @@
       <text class='text-right'>全部图片</text>
     </view>
     <!-- 列表 -->
-    <view class='lists-context' wx:for='{{listsImgs}}' wx:key="item">
+    <view class='lists-context' wx:for='{{rmtpData}}' wx:key="item">
       <view class='list-context-img'>
         <!-- 图片 -->
-        <image src='{{item}}' />
+        <image src='{{urlInfo}}{{item.imgResources.filePath}}' />
         <!-- 头像 -->
         <view class='lists-context-name'>
-            <image src='{{headImg}}' />
+            <image src='{{urlInfo}}{{item.headResources.filePath}}' />
         </view>
       </view>
       <!-- 标题 -->
       <view class='lists-context-title'>
-          <text>Hello,I'm KimSoHyun</text>
+          <text>{{item.rmTitle}}</text>
       </view>
       <!-- 内容 -->
       <view class='lists-context-body'>
-          <text>金所泫（김소현），1999年6月4日出生于澳大利亚，韩国女演员。
-            代表作品:想你，拥抱太阳的月亮，My boy，可疑的保姆，学校2015，打架吧鬼神
+          <text>{{item.rmContext}}
           </text>
       </view>
     </view>

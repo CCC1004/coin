@@ -1,18 +1,18 @@
 <view class="container">
   <view class="loginPage">
     <view class='backImg'>
-      <image src='../../../images/66.jpeg'></image>
+      <image src='{{backgroudImg}}'></image>
       <view class='dist_s'></view>
     </view>
     <!-- <view class="title">KimSoHyun</view> -->
     <view class="login-from">
       <!--账号-->
       <view class="username">
-        <image class="nameImage" src="../../../images/icon/name.png"></image>
+        <image class="nameImage" src="/images/icon/name.png"></image>
         <input class="inputText" placeholder-class="psection" placeholder="请输入账号" bindinput="usernameInput" /> </view>      
       <!--密码-->
       <view class="password">
-        <image class="keyImage" src="../../../images/icon/key.png"></image>
+        <image class="keyImage" src="/images/icon/key.png"></image>
         <input class="inputText" placeholder-class="psection" password="true" 
            placeholder="请输入密码" bindinput="passwordInput" /> 
       </view>
@@ -42,13 +42,13 @@
       </view>
       <view class='otherLogin'>
         <view class='otherLogin-item'>
-          <image src='../../../images/logo/koukou.jpg'/>
+          <image src='/images/logo/koukou.jpg'/>
         </view>
          <view class='otherLogin-item2'>
-          <image src='../../../images/logo/weixin.jpg'/>
+          <image src='/images/logo/weixin.jpg'/>
         </view>
          <view class='otherLogin-item2'>
-            <image src='../../../images/logo/shouji.jpg'/>
+            <image src='/images/logo/shouji.jpg'/>
         </view>
       </view>
 
