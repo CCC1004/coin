@@ -1,5 +1,5 @@
 <view class="head">
-    <image src="{{wxUserInfo.avatarUrl ? wxUserInfo.avatarUrl : '/images/mine.png'}}" mode="widthFix"></image>
+    <image src="{{wxUserInfo.avatarUrl ? wxUserInfo.avatarUrl : '/images/app/mine.png'}}" mode="widthFix"></image>
 </view>
 
 <view class="user-info">
