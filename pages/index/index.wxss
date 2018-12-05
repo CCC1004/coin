@@ -15,7 +15,7 @@ swiper{
 
 .selects{
   margin-top: 10px;
-  border-bottom: 4px #ddd solid;
+  /* border-bottom: 4px #ddd solid; */
   padding-bottom: 10px;
 }
 
@@ -38,80 +38,36 @@ swiper{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:center;
+  /* justify-content:center; */
 }
 
-.selects-context-imgs{
-  height: 200rpx;
-  width: 45%;
-  background-color: #999;
+.selects-context{
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 6px;
+}
+
+.selects-context-item{
+  flex-direction: row;
+  flex-wrap: wrap;
   position: relative;/*相对定位*/
+  margin-left: 30rpx;
+  margin-right: 15rpx;
+  margin-top: 30rpx;
+  margin-bottom: 60rpx;
 }
 
-.selects-context-imgs image{
+.selects-context-item image{
   width: 100%;
   height: 100%;
 }
 
-.selects-context-text{
-  font-size: 10px;
-  position: absolute; /* 绝对定位 */
-  bottom: 0px;
-  height: 30rpx;
-  width: 100%;
-  /* 渐变色，第一个参数是从哪开始，第二个参数为起始颜色，第三个参数为终止颜色 */
-  background: -webkit-linear-gradient(bottom,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0));
-  color: #ddd;
-}
-
-.lists{
-  margin-top: 10px;
-  
-}
-
-.lists-context{
-  margin-top: 10px;
-  width: 100%;
-  height: 600rpx;
-}
-
-.list-context-img{
-  width: 100%;
-  height: 400rpx;
-  position: relative;
-}
-
-.list-context-img image{
-   width: 100%;
-  height: 100%;
-}
-
-/* 头像 */
-.lists-context-name{
-  width: 100rpx;
-  height: 100rpx;
-  position: absolute;
-  bottom: -50rpx;
-  right: 50rpx;/*距离右边距离*/
-}
-
-.lists-context-name image{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.lists-context-title{
-  margin-top: 5px;
-}
-
-.lists-context-body{
-  height: 100rpx;
-  width: 100%;
-  padding: 5px;
+.selects-context-item text{
   font-size: 12px;
-  color: #999;
+}
+
+.selects-context-block{
+  width: 100%;
+  height: 20rpx;
+ border-bottom: 4px #ddd solid;
 }

@@ -12,7 +12,7 @@ App({
   globalData: {
     kimUserInfo: null,//系统用户信息(数据库表kim_user)
     wxUserInfo: null,//微信登录用户信息
-    kim_url: "http://localhost:8084/"
+    kim_url: "http://localhost:8064/"
   },
   
   appData: {

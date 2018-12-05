@@ -4,7 +4,7 @@
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{lbData}}" wx:key="item">
         <swiper-item>
-          <image src="{{urlInfo}}{{item.kimResources.filePath}}" class="slide-image"/>
+          <image src="{{urlInfo}}{{item.filePath}}" class="slide-image"/>
         </swiper-item>
       </block>
     </swiper>
@@ -12,48 +12,62 @@
 
   <view class='selects'>
     <view class='selects-header'>
-      <text>精品推荐</text>
-      <text class='text-right'>全部精品</text>
+      <text>精品分类</text>
+      <text class='text-right'>全部分类</text>
     </view>
 
     <view class='selects-context'>
 
-      <view class='selects-context-imgs' wx:for='{{jptjData}}' wx:key="item">
-         <image src='{{urlInfo}}{{item.kimResources.filePath}}' />
-          <view class='selects-context-text'>
+      <!-- <view class='selects-context-imgs' wx:for='{{jptjData}}' wx:key="item">
+         <image src='{{urlInfo}}{{item.filePath}}' />
+          
               <text>{{item.jpDesc}}</text>
           </view>
+      </view> -->
+
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
+      </view>
+
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
+      </view>
+
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
+      </view>
+
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
+      </view>
+
+      <view class='selects-context-block'></view>
+      
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
+      </view>
+
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
+      </view>
+
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
+      </view>
+
+      <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
       </view>
 
 
-    </view>
-  </view>
-
-  <view class='lists'>
-    <!-- 头 -->
-     <view class='selects-header'>
-      <text>热门图片</text>
-      <text class='text-right'>全部图片</text>
-    </view>
-    <!-- 列表 -->
-    <view class='lists-context' wx:for='{{rmtpData}}' wx:key="item">
-      <view class='list-context-img'>
-        <!-- 图片 -->
-        <image src='{{urlInfo}}{{item.imgResources.filePath}}' />
-        <!-- 头像 -->
-        <view class='lists-context-name'>
-            <image src='{{urlInfo}}{{item.headResources.filePath}}' />
-        </view>
-      </view>
-      <!-- 标题 -->
-      <view class='lists-context-title'>
-          <text>{{item.rmTitle}}</text>
-      </view>
-      <!-- 内容 -->
-      <view class='lists-context-body'>
-          <text>{{item.rmContext}}
-          </text>
-      </view>
     </view>
   </view>
 

@@ -31,13 +31,13 @@ Page({
     })
 
     //获取轮播列表
-    this.getLbList(this)
+    // this.getLbList(this)
 
     //获取精品推荐列表
-    this.getJptjList(this)
+    // this.getJptjList(this)
 
     //获取热门图片列表
-    this.getRmtpList(this)
+    // this.getRmtpList(this)
     
   },
 

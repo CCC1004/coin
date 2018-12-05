@@ -42,7 +42,7 @@ Page({
 
     if(username!=null && password!=null){
       wx.request({
-        url: app.globalData.kim_url + 'login/login',
+        url: app.globalData.kim_url + 'wxLogin/kimLogin',
         data: { 
           username: username, 
           password: password
