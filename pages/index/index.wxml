@@ -17,58 +17,17 @@
     </view>
 
     <view class='selects-context'>
-
-      <!-- <view class='selects-context-imgs' wx:for='{{jptjData}}' wx:key="item">
-         <image src='{{urlInfo}}{{item.filePath}}' />
-          
-              <text>{{item.jpDesc}}</text>
-          </view>
+      <view class='selects-context-item' wx:for='{{jptjData}}'  wx:key="item" wx:for-index="bindex" >
+        <image src='{{urlInfo}}{{item.filePath}}'/>
+        <text>{{item.flName}}</text>
+      </view>
+      <!-- <view class='selects-context-block' wx:if='bindex%4=0'></view> -->
+      <!-- <view class='selects-context-item'>
+         <image src='/images/1.jpg' />
+         <text>普通纪念币</text>
       </view> -->
-
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-      <view class='selects-context-block'></view>
-      
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-      <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view>
-
-
     </view>
+
   </view>
 
 </view>

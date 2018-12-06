@@ -16,8 +16,6 @@ Page({
     lbData: null,
     //精品推荐数据
     jptjData: null,
-    //热门图片列表数据集合
-    rmtpData: null,
   },
 
   /**
@@ -27,24 +25,21 @@ Page({
     
     //设置url
     this.setData({
-      urlInfo: app.globalData.kim_url,
+      urlInfo: app.globalData.coin_url,
     })
 
     //获取轮播列表
-    // this.getLbList(this)
+    this.getLbList(this)
 
     //获取精品推荐列表
-    // this.getJptjList(this)
+    this.getJptjList(this)
 
-    //获取热门图片列表
-    // this.getRmtpList(this)
-    
   },
 
   //获取轮播列表
   getLbList: function(that){
     wx.request({
-      url: app.globalData.kim_url + 'index/getLbList',
+      url: app.globalData.coin_url + 'index/getLbList/2',
       success: function (res) {
         that.setData({
           lbData: res.data.data,  
@@ -56,22 +51,10 @@ Page({
   //获取精品推荐列表
   getJptjList: function(that){
     wx.request({
-      url: app.globalData.kim_url + 'index/getJptjList',
+      url: app.globalData.coin_url + 'index/getJptjList/2',
       success: function (res) {
         that.setData({
           jptjData: res.data.data,
-        })
-      }
-    })
-  },
-
-  //获取热门图片列表
-  getRmtpList: function (that) {
-    wx.request({
-      url: app.globalData.kim_url + 'index/getRmtpList',
-      success: function (res) {
-        that.setData({
-          rmtpData: res.data.data,
         })
       }
     })
