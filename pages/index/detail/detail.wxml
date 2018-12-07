@@ -1,0 +1,24 @@
+  
+  <view class="table">
+    <view class='title'>
+      最新{{flName}}价格
+    </view>
+    <view class="tr">
+        <view class="th th1">编号</view>
+        <view class="th th2">名称</view>
+        <view class="th th3">面值(元)</view>
+        <view class="th th4">发行日期</view>
+        <view class="th th5">发行量</view>
+        <view class="th th6">价 格</view>
+        <view class="th th7">图片</view>
+    </view>
+    <view class="tr" wx:for="{{5}}">
+        <view class="td td1">1</view>
+        <view class="td td2">建国钞</view>
+        <view class="td td3">50元</view>
+        <view class="td td4">1999年</view>
+        <view class="td td5">6000万</view>
+        <view class="td td6">230~290</view>
+        <view class="td td7"></view>
+    </view>
+  </view>

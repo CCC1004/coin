@@ -16,6 +16,7 @@ Page({
     lbData: null,
     //精品推荐数据
     jptjData: null,
+    
   },
 
   /**
@@ -59,6 +60,20 @@ Page({
       }
     })
   },
+
+  //查看分类详情
+  seaDetail: function (event){
+    //精品分类id
+    var guid = event.currentTarget.dataset.guid;
+    //精品分类名称
+    var name = event.currentTarget.dataset.name;
+
+
+    wx.navigateTo({
+      url: './detail/detail?guid=' + guid + '&name=' + name,
+    })
+
+  }
 
 
 })

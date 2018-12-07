@@ -11,24 +11,23 @@
   </view>
 
   <view class='selects'>
+   <view class='selects-context-block'></view>
     <view class='selects-header'>
       <text>精品分类</text>
       <text class='text-right'>全部分类</text>
     </view>
+    <view class='selects-context-block'></view>
 
     <view class='selects-context'>
-      <view class='selects-context-item' wx:for='{{jptjData}}'  wx:key="item" wx:for-index="bindex" >
-        <image src='{{urlInfo}}{{item.filePath}}'/>
-        <text>{{item.flName}}</text>
+      <view class='selects-context-list' wx:for='{{jptjData}}'  wx:key="item" wx:for-index="bindex" >
+        <view class='selects-context-item' data-guid='{{item.guid}}' data-name='{{item.flName}}' bindtap='seaDetail' >
+          <image src='{{urlInfo}}{{item.filePath}}'/>
+          <text>{{item.flName}}</text>
+        </view>
       </view>
-      <!-- <view class='selects-context-block' wx:if='bindex%4=0'></view> -->
-      <!-- <view class='selects-context-item'>
-         <image src='/images/1.jpg' />
-         <text>普通纪念币</text>
-      </view> -->
+      <text wx:if="{{jptjData==null}}" style="color:#999;">(系统维护中...)</text>
     </view>
-
+     <view class='selects-context-block'></view>
   </view>
 
 </view>
-
