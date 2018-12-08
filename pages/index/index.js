@@ -70,7 +70,7 @@ Page({
 
 
     wx.navigateTo({
-      url: './detail/detail?guid=' + guid + '&name=' + name,
+      url: './kind/kind?guid=' + guid + '&name=' + name,
     })
 
   }

@@ -12,7 +12,7 @@
         <view class="th th6">价 格</view>
         <view class="th th7">图片</view>
     </view>
-    <view class="tr" wx:for="{{5}}">
+    <view class="tr" wx:for="{{kindData}}"  wx:key="item" wx:for-index="bindex" >
         <view class="td td1">1</view>
         <view class="td td2">建国钞</view>
         <view class="td td3">50元</view>

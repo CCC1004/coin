@@ -9,7 +9,7 @@
     "pages/logs/logs",
     "pages/loginPages/protocol/protocol",
     "pages/myself/mine/mine",
-    "pages/index/detail/detail"
+    "pages/index/kind/kind"
   ],
   "window": {
     "backgroundTextStyle": "light",
