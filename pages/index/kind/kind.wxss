@@ -18,16 +18,14 @@
   width:100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dadada;
+  
 }
 .th,.td{
   padding: 10rpx;
-  border-bottom: 1px solid #dadada;
-  border-right: 1px solid #dadada;
   text-align: center;
   width: 100%;
-}
-.th1,.th2,.td1,.td2{
-  width: 40%;
 }
 .th{
   font-weight: 800;
@@ -37,4 +35,9 @@
 .td{
   font-size: 20rpx;
   color: #e74080;
+}
+
+.kindImg{
+  width: 130rpx;
+  height: 130rpx;
 }
