@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/kind2/kind2",
     "pages/index/index",
     "pages/myself/myself",
     "pages/home/homePage",

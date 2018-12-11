@@ -1,0 +1,55 @@
+
+<view class='body'>
+  <view class='detail'>
+    <!-- list start -->
+    <view class='list' wx:for="{{kindData}}"  wx:key="item" wx:for-index="bindex" >
+      <view class='title'>{{item.kindName}}</view>
+      <view class='item-head'>
+        <view class='img'>
+          <image src='/images/66.jpeg '/>
+        </view>
+        <view class='right'>
+          <view class='tr'>
+            <text class='td'>【产品描述】：</text>
+            <text class='context'>{{item.kindDesc}}</text>
+          </view>
+          <view class='tr'>
+            <text class='td'>【面额】：</text>
+            <text class='context'>{{item.kindValue}}</text>
+          </view>
+          <view class='tr'>
+            <text class='td'>【发行机构】：</text>
+            <text class='context'>{{item.kindOrg}}</text>
+          </view>
+          <view class='tr'>
+            <text class='td'>【发行时间】：</text>
+            <text class='context'>{{item.issueTime}}</text>
+          </view>
+          <view class='tr'>
+            <text class='td'>【发行量】：</text>
+            <text class='context'>{{item.issueSize}}</text>
+          </view>
+          <view class='tr'>
+            <text class='td'>【材质】：</text>
+            <text class='context'>{{item.kindMaterial}}</text>
+          </view>
+          <view class='tr'>
+            <text class='td'>【规格】：</text>
+            <text class='context'>{{item.kindSize}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='item-down'>
+        <view class='tr'>
+          <text class='td'>【正面】：</text>
+          <text class='context'>{{item.kindHead}}</text>
+        </view>
+        <view class='tr'>
+          <text class='td'>【背面】：</text>
+          <text class='context'>{{item.kindTail}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- list end -->
+  </view>
+</view>

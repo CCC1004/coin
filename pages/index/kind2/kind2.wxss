@@ -1,0 +1,94 @@
+.body{
+   width:100%; 
+}
+
+.detail{
+  width:98%; 
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border:1px solid #dadada;
+  margin: 5rpx;
+}
+
+
+
+/* 每条数据详情信息 */
+.list{
+  width:100%; 
+  padding: 15rpx;
+}
+
+.title{
+  width: 97%;
+  text-align: center;
+  margin: 10rpx;
+  background-color: #46c8da;
+}
+
+.item-head{
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 图片 */
+.img{
+  width: 43%;
+  height: 100%;
+}
+
+.img image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 右边数据 */
+.right{
+  font-size: 25rpx;
+  color: #330e0e;
+  width: 57%;
+}
+
+.right .tr{
+  width: 100%;
+  margin: 3rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.right .tr .td{
+  width: 42%;
+}
+
+.right .tr .context{
+  font-size: 25rpx;
+  width: 58%;
+}
+
+/* 下面数据 */
+.item-down{
+  font-size: 25rpx;
+  color: #330e0e;
+  margin-top: 10rpx;
+  width: 100%;
+  height: 20%;
+}
+
+.item-down .tr{
+  width: 100%;
+  margin: 3rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-down .tr .td{
+  width: 20%;
+}
+
+.item-down .tr .context{
+  font-size: 25rpx;
+  width: 80%;
+}
